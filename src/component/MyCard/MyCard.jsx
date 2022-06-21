@@ -5,16 +5,15 @@ import "./MyCard.css";
 class MyCard extends Component {
     render(){
         return(
-            <div className="MyCard"> 
+            <div className="MyCard col-4 mb-3"> 
                <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://m.media-amazon.com/images/I/71ruDmtlBOL._AC_SX500_.jpg" />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>{this.props.title}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {this.props.price}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">{this.props.Link}</Button>
       </Card.Body>
     </Card>
             </div>
